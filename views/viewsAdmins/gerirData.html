@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <script src="../../sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../../sweetalert2/dist/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  
+<title>Os Fregueses-Administradores</title>
+    
+    
+</head>
+    <body onload="onLoad()" style="background-color: rgb(67, 68, 73)">
+        
+       
+        <header>
+        	
+        	<!-- Background Image -->
+		<div class="bg-img" style="background-image: url('../img/capa.jpg');">
+			<div class="overlay"></div>
+		</div>
+		<!-- /Background Image -->
+        	
+		
+		<!-- Nav -->
+		<nav id="nav" class="navbar nav-transparent" style="background-color: rgb(66, 139, 202) !important;">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+						<div class="navbar-brand">
+						<a href="/admins">
+						
+							<img class="logo-alt" src="../img/logotipo.png" alt="logo"> 
+							
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Collapse nav button -->
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+					<!-- /Collapse nav button -->
+				</div>
+
+				<!--  Main navigation  -->
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li class="has-dropdown"><a href="">☰</a>
+						<ul class="dropdown">
+							<li><a href="/admins/admins">Administradores</a></li>
+							<li><a href="/admins/colaboradores">Colaboradores</a></li>
+							<li><a href="/admins/associados">Associados</a></li>
+							<li><a href="/admins/eventos">Eventos</a></li>
+							<li><a href="/admins/patrocinadores">Patrocinadores</a></li>
+							<li><a href="/admins/pagamentos">Pagamentos</a></li>
+							<li><a href="/admins/alterarDados">Alterar Dados</a></li>
+							<li><a href="/admins/gerirData">Gerir Dados</a></li>
+							<li><a href="/logout">Log Out</a></li>
+						</ul>
+					</li>
+					<!--<li><button type="button" href="#" id="button" class="button">Login</button></li>-->
+					<!--<li><button class="page-scroll" data-toggle="modal" data-target="#myModalLogin">Login</button></li>-->   <!-- MUDOU -->
+				</ul>
+				<!-- /Main navigation -->
+
+			</div>
+		</nav>
+		<!-- /Nav -->
+		<!-- home wrapper -->
+		<div class="home-wrapper">
+			<div class="container">
+				<div class="row">
+
+				
+
+				</div>
+			</div>
+		</div>
+		<!-- /home wrapper -->
+
+	</header>
+	<div class="row">
+	<div class="col-md-6" style="padding: 10px">
+	     <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+	</div>
+	<div class="col-md-6" style="padding: 10px">
+	<div id="chartContainerInscritos" style="height: 300px; width: 100%;"></div>
+	</div>
+	<div class="col-md-6" style="padding: 10px">
+	<div id="chartContainerAssistencia" style="height: 300px; width: 100%;"></div>
+	</div>
+	</div>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../javascripts/admins/gerirData.js"></script>
+    </body>
+   
+    </html>

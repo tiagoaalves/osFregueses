@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "PW project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tiago Alves, Henrique Costa",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "consolidate": "^0.15.1",
+    "cookie-parser": "^1.4.4",
+    "cookieparser": "^0.1.0",
+    "express": "^4.17.1",
+    "express-sanitizer": "^1.0.5",
+    "express-session": "^1.17.0",
+    "mysql": "^2.17.1",
+    "node-cron": "^2.0.3",
+    "passport": "^0.4.0",
+    "sweetalert": "^2.1.2"
+  }
+}

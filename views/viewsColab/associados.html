@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <script src="../../sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../../sweetalert2/dist/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    
+    <title>Os Fregueses-Associados</title>
+</head>
+    <body onload="onLoad()" style="background-color: rgb(67, 68, 73)">
+        
+        <header>
+            
+            		<!-- Nav -->
+		<nav id="nav" class="navbar nav-transparent" style="background-color: rgb(204, 0, 0) !important">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a href="/colabs">
+						
+					<img class="logo-alt" src="../img/logotipo.png" alt="logo"> 
+							
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Collapse nav button -->
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+					<!-- /Collapse nav button -->
+				</div>
+
+				<!--  Main navigation  -->
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li class="has-dropdown"><a href="">☰</a>
+						<ul class="dropdown" style="background-color: rgb(204, 0, 0) !important">
+							<li><a href="/colabs/colaboradores">Colaboradores</a></li>
+							<li><a href="/colabs/associados">Associados</a></li>
+							<li><a href="/colabs/eventos">Eventos</a></li>
+							<li><a href="/colabs/alterarDados">Alterar Dados</a></li>
+							<li><a href="/logout">Log Out</a></li>
+						</ul>
+					</li>
+					<!--<li><button type="button" href="#" id="button" class="button">Login</button></li>-->
+					<!--<li><button class="page-scroll" data-toggle="modal" data-target="#myModalLogin">Login</button></li>-->   <!-- MUDOU -->
+				</ul>
+				<!-- /Main navigation -->
+
+			</div>
+		</nav>
+		<!-- /Nav -->
+		<!-- home wrapper -->
+		<div class="home-wrapper">
+			<div class="container">
+				<div class="row">
+
+				
+
+				</div>
+			</div>
+		</div>
+		<!-- /home wrapper -->
+
+	</header>
+	<!-- /Header -->
+        
+        
+      <div class="col-md-12">
+        <table class="table table-hover table-striped" id="users-table" style="background-color: white">
+        	<h2 style="color: white !important;">Lista de Associados:</h2>
+    <thead>
+        <tr>
+            <th scope="col">Número de Sócio</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Morada</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</div>
+<script type="text/javascript" src="../../javascripts/colaboradores/socios.colabs.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </body>
+    </html>

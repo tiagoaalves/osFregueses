@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+    <script src="../../sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="../../sweetalert2/dist/sweetalert2.min.css">
+    <script src="../../swal-forms/swal-forms.js"></script>
+    <link rel="stylesheet" href="../../swal-forms/swal-forms.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    
+
+    <title>Os Fregueses-Alterar Dados</title>
+    
+</head>
+    <body onload="onLoad()" style="background-color: rgb(67, 68, 73)">
+        
+
+<header>
+
+		<!-- Nav -->
+		<nav id="nav" class="navbar nav-transparent" style="background-color: rgb(204, 0, 0) !important">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+						<div class="navbar-brand">
+						<a href="/colabs">
+						
+					<img class="logo-alt" src="../img/logotipo.png" alt="logo"> 
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Collapse nav button -->
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+					<!-- /Collapse nav button -->
+				</div>
+
+				<!--  Main navigation  -->
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li class="has-dropdown"><a href="">☰</a>
+						<ul class="dropdown" style="background-color: rgb(204, 0, 0)">
+							<li><a href="/colabs/colaboradores">Colaboradores</a></li>
+							<li><a href="/colabs/associados">Associados</a></li>
+							<li><a href="/colabs/eventos">Eventos</a></li>
+							<li><a href="/colabs/alterarDados">Alterar Dados</a></li>
+							<li><a href="/logout">Log Out</a></li>
+						</ul>
+					</li>
+					<!--<li><button type="button" href="#" id="button" class="button">Login</button></li>-->
+					<!--<li><button class="page-scroll" data-toggle="modal" data-target="#myModalLogin">Login</button></li>-->   <!-- MUDOU -->
+				</ul>
+				<!-- /Main navigation -->
+
+			</div>
+		</nav>
+		<!-- /Nav -->
+	
+
+
+<div class="col-md-8" style="padding-left: 350px;">
+	<h1 style="color: white; text-align: left; !important;">Alterar Dados Pessoais</h1>
+	<form id="formNewUser" name="formNewUser" action="" onfocus="deleteUser()" style="background-color: white;  padding-bottom: 25px;">
+	<div class="form-group" style="padding: 16px">
+	 <input id="swal-input2" class="form-control" placeholder="Nome" onfocus="validatorNome()">
+	 <div id="nome"></div>
+	</div>
+	<div class="form-group" style="padding: 16px"> 
+	 <input id="swal-input9" class="form-control" placeholder="Email" onfocus="validatorEmail()">
+	 <div id="emailovski"></div>
+	</div>
+	<div class="form-group" style="padding: 16px">
+	 <input id="swal-input3" class="form-control" placeholder="Idade" type="number" onfocus="validatorIdade()">
+	 <div id="idadediv"></div>
+	</div>
+	<div class="form-group" style="padding: 16px">
+    	<select id="swal-input5" class="form-control">
+		   <option value="" disabled="" selected="">Sexo</option> 
+		   <option value="Masculino">Masculino</option> 
+		   <option value="Feminino">Feminino</option>
+		</select>
+	</div>
+	<div class="form-group" style="padding: 16px">
+		<input id="swal-input4" class="form-control" placeholder="Morada" type="text" onfocus="validatorMorada()">
+		<div id="morada"></div>
+	</div>
+	<div class="form-group" style="padding: 16px">
+		<input id="swal-input7" class="form-control" placeholder="Password" type="password" onfocus="validatorPassword()">
+		<div id="passworddiv"></div>
+	</div>
+	<div class="form-group" style="padding: 16px">
+		<input id="swal-input8" class="form-control" placeholder="Repita a Password" type="password" onfocus="validatorConfirmPassword()">
+		<div id="confirmPassworddiv"></div>
+	</div>
+	<div align="center">
+		   <button type="button" onclick="guardarDados()" class="btn btn-primary" aria-label="" style="border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);">Alterar Dados</button>
+	    </div>
+		</form>
+		
+</div>
+
+
+
+
+        <!-- Modal Login-->
+    <div class="modal fade" id="admins-dlg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"> Iniciar Sessao</h4>
+                </div>
+                <!--<div class="modal-body" id="modal-form">
+                    <iframe src="https://osfregueses-adamado.c9users.io//" frameBorder="0" width="100%" height="230px"></iframe>
+                </div>-->
+                <div class="form-group">
+              		<label for="email">Email</label>
+              		<input type="email" class="form-control" id="email"/>
+          		</div>
+          		<div class="form-group">
+              		<label for="password">Password</label>
+              		<input type="password" class="form-control" id="password"/>
+              	</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!--<button type="submit" class="btn btn-primary" onclick = "location.href='https://osfregueses-adamado.c9users.io/admin';">Login</button>-->
+                    <button type="submit" class="btn btn-primary" id="login" onclick = location.href="auth()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../javascripts/admins/alterarDados.js"></script>
+    </body>
+    </html>
